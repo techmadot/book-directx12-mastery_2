@@ -1,0 +1,6 @@
+[submodule "Common/imgui"]
+	path = Common/imgui
+	url = https://github.com/ocornut/imgui.git
+[submodule "Common/assimp"]
+	path = Common/assimp
+	url = https://github.com/assimp/assimp.git
