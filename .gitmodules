@@ -4,3 +4,15 @@
 [submodule "Common/assimp"]
 	path = Common/assimp
 	url = https://github.com/assimp/assimp.git
+[submodule "implot"]
+	path = implot
+	url = https://github.com/epezent/implot.git
+[submodule "Common/implot"]
+	path = Common/implot
+	url = https://github.com/epezent/implot.git
+[submodule "Common/tiny_performance_counter"]
+	path = Common/tiny_performance_counter
+	url = https://github.com/techmadot/tiny_performance_counter.git
+[submodule "Common/FidelityFX-SDK"]
+	path = Common/FidelityFX-SDK
+	url = https://github.com/GPUOpen-LibrariesAndSDKs/FidelityFX-SDK.git

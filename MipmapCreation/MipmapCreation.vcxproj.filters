@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{3a3d8f9c-aa8d-46ba-8dc1-75b062cbf31f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\MipRT">
+      <UniqueIdentifier>{7d97469d-c584-45c4-b862-5e7d2912f4f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\MipCS">
+      <UniqueIdentifier>{bdb80817-971b-4cda-b0a7-6385ece91e48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\shader">
+      <UniqueIdentifier>{9b31d7ee-3e43-4114-bba2-962cc0877089}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SimgleHeaderImpl.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Win32Application.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GfxDevice.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Model.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FileLoader.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\imgui\imgui.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\imgui\imgui_draw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\imgui\imgui_tables.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\imgui\imgui_widgets.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\imgui\backends\imgui_impl_win32.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\imgui\backends\imgui_impl_dx12.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TextureUtility.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Win32Application.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GfxDevice.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Model.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\App.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FileLoader.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\imgui\imstb_rectpack.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\imgui\imstb_textedit.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\imgui\imstb_truetype.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\imgui\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\imgui\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\imgui\backends\imgui_impl_win32.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\imgui\backends\imgui_impl_dx12.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TextureUtility.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="res\shader\ShaderCommon.hlsli">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\shader\GenerateMipsCS.hlsli">
+      <Filter>リソース ファイル\MipCS</Filter>
+    </None>
+    <None Include="src\shader\GenerateMipsLinearOddCS.inc">
+      <Filter>ソース ファイル\shader</Filter>
+    </None>
+    <None Include="src\shader\GenerateMipsLinearOddXCS.inc">
+      <Filter>ソース ファイル\shader</Filter>
+    </None>
+    <None Include="src\shader\GenerateMipsLinearOddYCS.inc">
+      <Filter>ソース ファイル\shader</Filter>
+    </None>
+    <None Include="src\shader\GenerateMipsLinearCS.inc">
+      <Filter>ソース ファイル\shader</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="res\shader\RenderSceneVS.hlsl">
+      <Filter>リソース ファイル</Filter>
+    </FxCompile>
+    <FxCompile Include="res\shader\RenderScenePS.hlsl">
+      <Filter>リソース ファイル</Filter>
+    </FxCompile>
+    <FxCompile Include="res\shader\SimpleVS.hlsl">
+      <Filter>リソース ファイル</Filter>
+    </FxCompile>
+    <FxCompile Include="res\shader\SimplePS.hlsl">
+      <Filter>リソース ファイル</Filter>
+    </FxCompile>
+    <FxCompile Include="res\shader\GenerateMipsLinearCS.hlsl">
+      <Filter>リソース ファイル\MipCS</Filter>
+    </FxCompile>
+    <FxCompile Include="res\shader\GenerateMipsLinearOddCS.hlsl">
+      <Filter>リソース ファイル\MipCS</Filter>
+    </FxCompile>
+    <FxCompile Include="res\shader\GenerateMipsLinearOddXCS.hlsl">
+      <Filter>リソース ファイル\MipCS</Filter>
+    </FxCompile>
+    <FxCompile Include="res\shader\GenerateMipsLinearOddYCS.hlsl">
+      <Filter>リソース ファイル\MipCS</Filter>
+    </FxCompile>
+    <FxCompile Include="res\shader\MipmapWriteVS.hlsl">
+      <Filter>リソース ファイル\MipRT</Filter>
+    </FxCompile>
+    <FxCompile Include="res\shader\MipmapWritePS.hlsl">
+      <Filter>リソース ファイル\MipRT</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>
