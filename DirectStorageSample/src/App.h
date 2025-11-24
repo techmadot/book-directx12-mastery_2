@@ -30,11 +30,6 @@ private:
   void DestroyImGui();
   ComPtr<ID3D12GraphicsCommandList> MakeCommandList();
 
-  struct Vertex
-  {
-    DirectX::XMFLOAT3 position;
-  };
-
   ComPtr<ID3D12RootSignature> m_rootSignature;
   ComPtr<ID3D12PipelineState> m_drawOpaquePipeline;
   ComPtr<ID3D12PipelineState> m_drawBlendPipeline;
@@ -64,69 +59,6 @@ private:
     float    time;
   } m_sceneParams;
 
-  struct PolygonMesh
-  {
-    D3D12_VERTEX_BUFFER_VIEW vbViews[3];
-    D3D12_INDEX_BUFFER_VIEW  ibv;
-
-    ComPtr<ID3D12Resource1>  position;
-    ComPtr<ID3D12Resource1>  normal;
-    ComPtr<ID3D12Resource1>  texcoord0;
-    ComPtr<ID3D12Resource1>  indices;
-
-    uint32_t indexCount;
-    uint32_t vertexCount;
-    uint32_t materialIndex;
-  };
-  struct MeshMaterial
-  {
-    DirectX::XMFLOAT4 diffuse{};  // xyz:色, w:アルファ.
-    DirectX::XMFLOAT4 specular{};
-    DirectX::XMFLOAT4 ambient{};
-
-    GfxDevice::DescriptorHandle srvDiffuse;
-    GfxDevice::DescriptorHandle samplerDiffuse;
-  };
-
-  // 定数バッファに書き込む構造体.
-  struct DrawParameters
-  {
-    DirectX::XMFLOAT4X4 mtxWorld;
-    DirectX::XMFLOAT4   baseColor; // diffuse + alpha
-    DirectX::XMFLOAT4   specular;  // specular
-    DirectX::XMFLOAT4   ambient;   // ambient
-
-    uint32_t  mode;
-    uint32_t  padd0;
-    uint32_t  padd1;
-    uint32_t  padd2;
-  };
-
-  struct TextureInfo
-  {
-    std::string filePath;
-    ComPtr<ID3D12Resource1> texResource;
-    GfxDevice::DescriptorHandle srvDescriptor;
-  };
-  struct DrawInfo
-  {
-    ComPtr<ID3D12Resource1> modelMeshConstantBuffer[GfxDevice::BackBufferCount];
-
-    int meshIndex = -1;
-    int materialIndex = -1;
-  };
-
-  struct ModelData
-  {
-    std::vector<PolygonMesh> meshes;
-    std::vector<MeshMaterial> materials;
-    std::vector<DrawInfo> drawInfos;
-    std::vector<TextureInfo> textureList;
-    std::vector<TextureInfo> embeddedTextures;
-    DirectX::XMMATRIX mtxWorld;
-  } m_model;
-  std::vector<TextureInfo>::const_iterator FindModelTexture(const std::string& filePath, const ModelData& model);
-
   bool  m_requestReload = false;
   bool  m_isCoolingPeriod = false;
   using time_point = std::chrono::high_resolution_clock::time_point;
@@ -141,10 +73,6 @@ private:
   time_point m_endLoadingTime;
   std::atomic<uint32_t> m_modelCountLoadCompleted;
   std::atomic<float> m_maxCpuUtilizationInLoading;
-
-  //std::shared_ptr<model::ModelDeserialized> m_test;
-  //using ModelDataDS = std::shared_ptr<model::ModelDeserialized>;
-  //std::vector<ModelDataDS> m_modelDataEntries;
 
   struct GraphData
   {

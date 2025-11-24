@@ -732,11 +732,6 @@ ComPtr<ID3D12GraphicsCommandList>  MyApplication::MakeCommandList()
   return commandList;
 }
 
-std::vector<MyApplication::TextureInfo>::const_iterator MyApplication::FindModelTexture(const std::string& filePath, const ModelData& model)
-{
-  return std::find_if(model.textureList.begin(), model.textureList.end(), [&](const auto& v) { return v.filePath == filePath; });
-}
-
 void MyApplication::LoadModelDataByDirectStorage()
 {
   std::default_random_engine rng;
